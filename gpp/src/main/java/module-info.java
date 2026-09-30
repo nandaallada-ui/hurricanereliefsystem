@@ -6,7 +6,7 @@ module com.gpprelief {
     opens com.gpprelief to javafx.fxml;
     exports com.gpprelief;
 
-    opens model to javafx.fxml;
-    exports model;
+    opens com.model to javafx.fxml;
+    exports com.model;
 }
 
