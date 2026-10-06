@@ -1,4 +1,4 @@
-package com.model;
+package com.gpprelief.model;
 
 public class HelloWorld {
     
