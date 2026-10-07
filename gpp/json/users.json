@@ -1,0 +1,36 @@
+[
+    {
+      "userId": "41ff79ac-2628-48c2-b336-e31bdda348ba",
+      "password": "password123",
+      "language": "English",
+      "currentLocation": "Columbia, SC"
+    },
+
+    {
+      "userId": "125746ee-73c5-49c6-bf5c-79a0912f738d",
+      "password": "123password",
+      "language": "English",
+      "currentLocation": "Myrtle Beach, SC"
+    },
+
+    {
+      "userId": "e521f78a-41f8-4843-8840-5fb64d75dc99",
+      "password": "password456",
+      "language": "English",
+      "currentLocation": "West Columbia, SC"
+    },
+
+    {
+      "userId": "c469e2a8-dba7-4a71-8de0-d60c08672601",
+      "password": "789password",
+      "language": "English",
+      "currentLocation": "Aiken, SC"
+    },
+
+    {
+      "userId": "4b5b98f7-474b-471f-8536-8d8399aa47c6",
+      "password": "password098",
+      "language": "English",
+      "currentLocation": "Blythewood, SC"
+    }
+]
