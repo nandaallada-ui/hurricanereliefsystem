@@ -20,6 +20,40 @@ public class DataLoader extends DataConstants {
             JSONParser parser = new JSONParser();
             JSONArray usersJSON = (JSONArray) parser.parse(reader);
 
+            for (int i = 0; i < usersJSON.size(); i++) {
+                JSONObject userJSON = (JSONObject) usersJSON.get(i);
+
+                String idStr = (String) userJSON.get(USER_ID);
+                UUID id = UUID.fromString(idStr);
+                String password = (String) userJSON.get(USER_PASSWORD);
+                String language = (String) userJSON.get(USER_LANGUAGE);
+                String currentLocation = (String) userJSON.get(USER_CURRENT_LOCATION);
+                String type = (String) userJSON.get(USER_TYPE);
+
+                if ("Victim".equalsIgnoreCase(type)) {
+                    users.add(new Victim(id, password, language, currentLocation));
+                } else if ("Volunteer".equalsIgnoreCase(type)) {
+                    boolean backgroundCheck = (Boolean) userJSON.get(USER_BACKGROUND_CHECK);
+                    users.add(new Volunteer(id, password, language, currentLocation, backgroundCheck));
+                } else if ("Admin".equalsIgnoreCase(type)) {
+                    boolean shelterAccess = (Boolean) userJSON.get(USER_SHELTER_ACCESS);
+                    users.add(new Admin(id, password, language, currentLocation, shelterAccess));
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return users;
+    }
+
+    public static ArrayList<Shelter> getShelters() {
+        ArrayList<Shelter> shelters = new ArrayList<>();
+
+        try (FileReader reader = new FileReader(SHELTERS_FILE_NAME)) {
+            JSONParser parser = new JSONParser();
+            JSONArray sheltersJSON = (JSONArray) parser.parse(reader);
+
             for (int i = 0; i < sheltersJSON.size(); i++) {
                 JSONObject shelterJSON = (JSONObject) sheltersJSON.get(i);
 
@@ -31,14 +65,39 @@ public class DataLoader extends DataConstants {
 
                 shelters.add(new Shelter(location, (int) capacity, (int) occupancy, status, petFriendly));
             }
-
-            return users;
-
         } catch (Exception e) {
             e.printStackTrace();
         }
 
-        return users;
+        return shelters;
 
         } 
+
+        public static ArrayList<ReliefRequest> getRequests() {
+        ArrayList<ReliefRequest> requests = new ArrayList<>();
+
+        try (FileReader reader = new FileReader(REQUESTS_FILE_NAME)) {
+            JSONParser parser = new JSONParser();
+            JSONArray requestsJSON = (JSONArray) parser.parse(reader);
+
+        for (int i = 0; i < requestJSON.size(); i++) {
+            JSONObject requestJSON = (JSONObject) requestsJSON.get(i);
+
+            String requestID = (String) requestJSON.get(REQUEST_ID);
+                String victimName = (String) requestJSON.get(REQUEST_VICTIM_NAME);
+                String location = (String) requestJSON.get(REQUEST_LOCATION);
+                String aidType = (String) requestJSON.get(REQUEST_AID_TYPE);
+                String specialRequests = (String) requestJSON.get(REQUEST_SPECIAL_REQUESTS);
+                String urgencyLevel = (String) requestJSON.get(REQUEST_URGENCY_LEVEL);
+                String status = (String) requestJSON.get(REQUEST_STATUS);
+                boolean petNeeds = (Boolean) requestJSON.get(REQUEST_PET_NEEDS);
+
+                requests.add(new ReliefRequest(requestID, victimName, location, aidType, specialRequests, urgencyLevel, status, petNeeds));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return requests;
+        }
 }
