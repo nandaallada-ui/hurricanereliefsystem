@@ -2,6 +2,7 @@ package com.model;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.UUID;
 import java.util.ArrayList;
 import java.util.List;
 import com.data.users; 
@@ -11,7 +12,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 
-public class DataLoader extends DataConstants {
+public class Dataloader extends DataConstants {
 
    public static ArrayList<User> getUsers() {
         ArrayList<User> users = new ArrayList<>();
