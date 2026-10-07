@@ -8,11 +8,11 @@ giving victums various needs.
 
 | Team Members | Role |
 | ------------ | ---- |
-| Alex P     | -- |
-| Nandasi A  | -- |
-| Ronnie G   | -- |
-| Melinda G  | -- |
-| Danny C    | -- |
+| Alex P       | -- |
+| Nandasi A    | -- |
+| Ronnie G     | -- |
+| Melinda G    | -- |
+| Danny C      | -- |
 
 ## Requirments
 ![requirments Document]()
