@@ -19,6 +19,7 @@ public class DataWriter extends DataConstants {
             userJSON.put(USER_PASSWORD, user.getPassword());
             userJSON.put(USER_LANGUAGE, user.getLanguage());
             userJSON.put(USER_CURRENT_LOCATION, user.getCurrentLocation());
+            userJSON.put(USER_EMAIL, user.getEmail());
 
             if (user instanceof Victim) {
                 userJSON.put(USER_TYPE, "Victim");
