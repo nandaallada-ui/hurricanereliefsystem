@@ -30,6 +30,7 @@ public class Dataloader extends DataConstants {
                 String language = (String) userJSON.get(USER_LANGUAGE);
                 String currentLocation = (String) userJSON.get(USER_CURRENT_LOCATION);
                 String type = (String) userJSON.get(USER_TYPE);
+                String email = (String) userJSON.get(USER_EMAIL);
 
                 if ("Victim".equalsIgnoreCase(type)) {
                     users.add(new Victim(id, password, language, currentLocation));
