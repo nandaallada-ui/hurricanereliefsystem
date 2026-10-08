@@ -16,4 +16,6 @@ public class resources {
         return waterSupplies;
     }
 
+    //?? idk for updatesupplies and resourcesalert
+
 }
