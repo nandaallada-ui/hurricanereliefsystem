@@ -23,9 +23,10 @@ public class Dataloader extends DataConstants {
 
             for (int i = 0; i < usersJSON.size(); i++) {
                 JSONObject userJSON = (JSONObject) usersJSON.get(i);
-
                 String idStr = (String) userJSON.get(USER_ID);
                 UUID id = UUID.fromString(idStr);
+                String FirstName = (String) firstName.get(firstName);
+                String LastName = (String) lastName.get(lastName);
                 String password = (String) userJSON.get(USER_PASSWORD);
                 String language = (String) userJSON.get(USER_LANGUAGE);
                 String currentLocation = (String) userJSON.get(USER_CURRENT_LOCATION);
