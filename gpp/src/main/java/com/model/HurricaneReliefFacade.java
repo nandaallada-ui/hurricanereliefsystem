@@ -1,3 +1,3 @@
-public class facade {
+public class HurricaneReliefFacade {
     
 }

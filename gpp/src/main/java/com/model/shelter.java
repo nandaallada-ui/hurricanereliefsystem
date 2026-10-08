@@ -1,3 +1,3 @@
-public class shelter {
+public class Shelter {
     
 }

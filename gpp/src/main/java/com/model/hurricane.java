@@ -1,3 +1,3 @@
-public class hurricane {
+public class Hurricane {
     
 }

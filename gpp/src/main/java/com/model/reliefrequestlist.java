@@ -1,3 +1,3 @@
-public class reliefrequestlist {
+public class ReliefRequestList {
     
 }
