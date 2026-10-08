@@ -10,6 +10,14 @@ public abstract class DataConstants {
     protected static final String USER_PHONE_NUMBER = "phoneNumber";
     protected static final String USER_EMAIL = "email";
     protected static final String USER_AGE = "age";
+    
+    /* this is also in uml
+    protected static final String USER_PASSWORD = "password";
+    protected static final String USER_LANGUAGE = "language";
+    protected static final String USER_CURRENT_LOCATION = "currentLocation";
+    protected static final String USER_ADMIN = "admin";
+    */
+
     //shelter
     protected static final String SHELTERS_FILE_NAME = "json/shelters.json";
     protected static final String SHELTER_LOCATION = "location";
