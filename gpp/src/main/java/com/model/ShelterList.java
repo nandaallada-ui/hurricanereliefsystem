@@ -21,7 +21,7 @@ public class ShelterList {
     public Shelter getShelterById(UUID shelterId) {
         return null; // TODO
     }
-
+    
     public ArrayList<Shelter> getAvailableShelters() {
         return new ArrayList<>(); // TODO
     }
